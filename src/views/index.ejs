@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+        <meta charset="utf=8">
+        <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
+        <title> Login y formulario de registro -Juan Evangelista Perez Ricardo </title>
+        <link rel="stylesheet" href= "/estilos.css">
+</head>
+<body>
+    <main>
+        <div class="ContenedorGeneral">
+            <div class="CapaPosterior">
+                <h3> Tengo una cuenta </h3>
+                <p> Inicie su sesion </p>
+                <button id="btn_iniciar_sesion"> Iniciar mi Sesion </buttonid></button>
+            </div>
+            <div class="CapaTraseraRegistro">
+                <h3>No tengo una cuenta</h3>
+                <p>Registrese ahora</p>
+                <button id="btn_registro">Registrese</buttonid></button>
+            </div>
+            <!--Formularios de registro-->
+            <div class="Formularios">
+                <!--Formularios de registro-->
+                <form id="registro" action="/registro" method="post" class="formularioRegistro">
+                    <h2>Registrarse</h2>
+                    <input name="nombres" type="text" placeholder="Nombre" required>
+                    <input name="apellidos" type="text" placeholder="Apellidos" required>
+                    <select name="tipoDocumento" id="tipoDocumento" required>
+                        <option value="">Seleccione un tipo de documento</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="Cedula de Ciudadania">Cédula de Ciudadanía</option>
+                        <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                    </select>
+                    <input name="documento" type="number" required placeholder="Numero de documento">
+                    <input name="correo" type="email" required placeholder="correo electronico">
+                    <input name="fecha" type="date" required placeholder="fecha de nacimiento">
+                    <input name="ciudad" type="text" required placeholder="ciudad de nacimiento">
+                    <input name="telefono" type="number" required placeholder="telefono">
+                    <input name="usuario" type="text" required placeholder="usuario">
+                    <input name="password" type="password" placeholder="Contraseña"  required pattern="[a-zA-Z0-9]{8,}" title="La contraseña debe tener al menos 8 caracteres y un caracter especial.">
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
